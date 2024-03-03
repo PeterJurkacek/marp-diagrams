@@ -35,7 +35,7 @@ jobs:
       - name: Copy images
         run: mkdir build && cp -R slides/img build/img && cp -R slides/themes build/themes
       - name: Marp Build
-        run: npx marp -c ./marp.config.js ./diagrams.md -o build/index.html
+        run: npx marp --config-file ./marp.config.js --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
