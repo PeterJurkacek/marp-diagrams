@@ -26,16 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install Node.js and dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: '16'
-      - name: Install dependencies
-        run: npm ci
       - name: Copy images
         run: mkdir build && cp -R slides/img build/img && cp -R slides/themes build/themes
-      - name: Marp Build
-        run: npx marp --config-file ./marp.config.js --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
+      - name: Marp Build AI in Edu (README)
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: --config-file ./marp.config.js --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
+        env:
+          MARP_USER: root:root
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
