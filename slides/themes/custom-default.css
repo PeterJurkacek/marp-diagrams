@@ -1,0 +1,100 @@
+/* custom-default.css */
+/* @theme custom-default */
+
+
+@import 'default';
+
+@font-face {
+  font-family: "AID mono";
+  src: 
+    url('./themes/fonts/aid/DMMono-AID-Text.otf'),
+    url('./themes/fonts/aid/DMMono-AID-Text.woff2') format('woff2'),
+    url('./themes/fonts/aid/DMMono-AID-Text.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AID headline";
+  src:
+    url('./themes/fonts/aid/DMSans-AID-Headline-Regular.otf'),
+    url('./themes/fonts/aid/DMSans-AID-Headline-Regular.woff2') format('woff2'),
+    url('./themes/fonts/aid/DMSans-AID-Headline-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AID regular";
+  src: 
+    url('./themes/fonts/aid/DMSans-AID-Text-Regular.otf'),
+    url('./themes/fonts/aid/DMSans-AID-Text-Regular.woff2') format('woff2'),
+    url('./themes/fonts/aid/DMSans-AID-Text-Regular.woff') format('woff');
+}
+
+
+section {
+  --heading-strong-color: #000000;
+
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'AID regular';
+  background: #ABF7CE;
+}
+
+section h1 {
+  font-family: 'AID headline';
+  color:#000000;
+  font-weight: normal;
+}
+
+section h2 {
+  font-family: 'AID regular';
+  font-weight: normal;
+}
+
+section strong {
+  font-family: 'AID headline';
+  background-color: #C3AAEE;
+  font-weight: bold;
+  padding: 8px; /* Adjust padding to give space around the text */
+  border-radius: 0px; /* Optional: Add rounded corners for a softer look */
+}
+
+.aid {
+  font-family: 'AID headline';
+  color:#000000;
+  background-color: #C3AAEE;
+  margin-right: 2px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.columns3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+} 
+/*USE: ![w:600 center](img/ai_0.png.png) */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+}
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-window-maximize { color: skyblue; }
+
+svg[id^="mermaid-"] { 
+  min-width: 959px; 
+  max-width: 960px; 
+  min-height: 360px; 
+  max-height: 600px;
+}
+
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
