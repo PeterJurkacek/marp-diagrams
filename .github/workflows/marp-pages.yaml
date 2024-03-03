@@ -31,7 +31,7 @@ jobs:
       - name: Marp Build AI in Edu (README)
         uses: docker://marpteam/marp-cli:latest
         with:
-          args: --config-file ./marp.config.js --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
+          args: --engine ./engine.js --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
         env:
           MARP_USER: root:root
       - name: Setup Pages
