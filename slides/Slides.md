@@ -1,11 +1,12 @@
 ---
 marp: true
-theme: default
+theme: custom-default
+title: Unlocking the Future of Dentistry
+paginate: true
+footer: 'AI:Dental'
 ---
 
-
 # Marp diagram plugin example
-
 Powered by [kroki.io](https://kroki.io)
 
 ```bash
@@ -13,6 +14,17 @@ git clone https://gist.github.com/8931dd98769bcc1c5b4b92fd1234a190.git marp-diag
 cd ./marp-diagrams
 npm i
 npx marp -c ./marp.config.js ./diagrams.md -p
+```
+
+---
+
+```mermaid
+flowchart LR
+  input["An X-Ray image"]
+  model["Dental professional"]
+  output["Opinion"]
+
+  input --> model --> output
 ```
 
 ---
@@ -44,18 +56,16 @@ gantt
     Task in sec      :2014-01-12, 12d
     another task     :24d
 ````
-
 ---
 
 ```mermaid
 pie
-    title Key elements in Product X
-    "Calcium" : 42.96
-    "Potassium" : 50.05
-    "Magnesium" : 10.01
-    "Iron" :  5
-```    
-
+  title Key elements in Product X
+  "Calcium"   : 42.96
+  "Potassium" : 50.05
+  "Magnesium" : 10.01
+  "Iron"      : 5
+```
 ---
 
 ```plantuml

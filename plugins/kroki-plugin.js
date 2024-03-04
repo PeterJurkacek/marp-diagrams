@@ -39,9 +39,10 @@ const marpKrokiPlugin = (md) => {
 
       if (krokiLangs.includes(lang)) {
         const data = deflateSync(tokens[idx].content).toString('base64url')
-
+        
         // <marp-auto-scaling> is working only with Marp Core v3
-        return `<p><marp-auto-scaling data-downscale-only><img src="${entrypoint}${lang}/svg/${data}"/></marp-auto-scaling></p>`
+        // return `<p><marp-auto-scaling data-downscale-only><img src="${entrypoint}${lang}/svg/${data}"/></marp-auto-scaling></p>`
+        return `<p><img src="${entrypoint}${lang}/svg/${data}"/></p>`
       }
     }
 
